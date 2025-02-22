@@ -17,7 +17,7 @@ The following packages are installed from the AUR and other sources (e.g., GitHu
 
 ```bash
 
-sudo paru -S \
+sudo yay -S \
   hyprland \
   kitty \
   firefox \
@@ -40,7 +40,7 @@ sudo paru -S \
   brightnessctl \
   pavucontrol \
   yazi \
-  pywal16 \
+  python-pywal16 \
   python-pywalfox-librewolf \
   nwg-look \
   waybar \
