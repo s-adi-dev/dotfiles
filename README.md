@@ -8,7 +8,7 @@ To install the dotfiles and configurations, you can clone this repository and ru
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/dotfiles.git
+git clone https://github.com/s-adi-dev/dotfiles.git
 cd dotfiles
 ```
 
@@ -16,47 +16,49 @@ cd dotfiles
 The following packages are installed from the AUR and other sources (e.g., GitHub for the GTK theme):
 
 ```bash
-sudo paru -S
-  hyprland
-  kitty
-  firefox
-  zsh
-  stow
-  ttf-jetbrains-mono-nerd
-  ttf-firacode-nerd 
-  neovim
-  zoxide
-  bat
-  fzf
-  eza
-  oh-my-posh
-  clipman
-  jq
-  zip
-  unzip
-  nautilus
-  blueman
-  brightnessctl
-  pavucontrol
-  yazi
-  pywal16
-  python-pywalfox-librewolf
-  nwg-look
-  waybar
-  waypaper
-  hyprlock
-  hyprpaper
-  hypridle
-  hyprshot
-  wlogout
-  pulseaudio
-  bibata-cursor-theme
-  gnome-calculator
-  gnome-clocks
-  rofi-wayland
-  gammastep
-  smile
+
+sudo paru -S \
+  hyprland \
+  kitty \
+  firefox \
+  zsh \
+  stow \
+  ttf-jetbrains-mono-nerd \
+  ttf-firacode-nerd \
+  neovim \
+  zoxide \
+  bat \
+  fzf \
+  eza \
+  oh-my-posh \
+  clipman \
+  jq \
+  zip \
+  unzip \
+  nautilus \
+  blueman \
+  brightnessctl \
+  pavucontrol \
+  yazi \
+  pywal16 \
+  python-pywalfox-librewolf \
+  nwg-look \
+  waybar \
+  waypaper \
+  hyprlock \
+  hyprpaper \
+  hypridle \
+  hyprshot \
+  wlogout \
+  pulseaudio \
+  bibata-cursor-theme \
+  gnome-calculator \
+  gnome-clocks \
+  rofi-wayland \
+  gammastep \
+  smile \
   pamixer
+
 ```
 
 ### 3. Install `graphite-gtk-theme` (from GitHub)
