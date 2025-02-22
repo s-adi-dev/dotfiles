@@ -1,0 +1,109 @@
+/*
+          _                         _    
+__      _| | ___   __ _  ___  _   _| |_  
+\ \ /\ / / |/ _ \ / _` |/ _ \| | | | __| 
+ \ V  V /| | (_) | (_| | (_) | |_| | |_  
+  \_/\_/ |_|\___/ \__, |\___/ \__,_|\__| 
+                  |___/                  
+ 
+by Stephan Raabe (2023) 
+----------------------------------------------------- 
+*/
+
+/* -----------------------------------------------------
+ * Import Pywal colors 
+ * ----------------------------------------------------- */
+@import "../../.cache/wal/colors-wlogout.css";
+
+/* -----------------------------------------------------
+ * General 
+ * ----------------------------------------------------- */
+
+* {
+  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial,
+    sans-serif;
+  background-image: none;
+  transition: 20ms;
+  box-shadow: none;
+}
+
+window {
+  background: url("/home/aditya/.cache/wallpaper/blurred_wallpaper.png");
+  background-size: cover;
+  font-size: 16pt;
+  color: @color6;
+}
+
+button {
+  /* color: @color9; */
+  color: #ffffff;
+  background-color: @color4;
+  outline-style: none;
+  border: none;
+  border-width: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15%;
+  border-radius: 0px;
+  box-shadow: none;
+  text-shadow: none;
+  animation: gradient_f 20s ease-in infinite;
+  opacity: 0.8;
+}
+
+button:focus {
+  background-color: @color6;
+  background-size: 20%;
+}
+
+button:hover {
+  background-color: @color6;
+  background-size: 25%;
+  border-radius: 50px;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.28, 1.682);
+}
+
+button span {
+  font-size: 1.2em; /* Increase the font size */
+}
+
+#lock {
+  border-radius: 50px 0px 0px 0px;
+  background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+  border-radius: 0px 0px 0px 50px;
+  background-image: image(url("icons/logout.png"));
+}
+
+#shutdown {
+  border-radius: 0px 50px 0px 0px;
+  background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+  border-radius: 0px 0px 50px 0px;
+  background-image: image(url("icons/reboot.png"));
+}
+
+button:hover#lock {
+  border-radius: 50px 50px 0px 50px;
+  margin: -70px 0px 0px -70px;
+}
+
+button:hover#shutdown {
+  border-radius: 50px 50px 50px 0px;
+  margin: -70px -70px 0px 0px;
+}
+
+button:hover#logout {
+  border-radius: 50px 0px 50px 50px;
+  margin: 0px 0px -70px -70px;
+}
+
+button:hover#reboot {
+  border-radius: 0px 50px 50px 50px;
+  margin: 0px -70px -70px 0px;
+}

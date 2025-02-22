@@ -1,0 +1,24 @@
+stow,kitty,nvim,zsh,bat,fzf,zoxide,oh-my-posh,eza,node/npm,clipman,unzip,hyprland,hyprpaper,firefox,jet-brains-mono-nerd,
+ttf-firacode-nerd
+hyprpaper,waypaper,waybar
+jq(json processor for moving windows in hyprland)
+nautilus
+blueman for blueman manager
+brightnessctl
+pavucontrol for volume
+yazi
+pywal16
+python-pywalfox-librewolf (for firefox)
+nwg-look(gtk theming gui app)
+hyprlock,hypridle
+hyprshot
+wlogout
+pulseaudio
+graphite-gtk-theme, cmd = ./install.sh -d ~/.themes/ -t -c dark -s standard -l --tweaks darker rimless normal
+bibata-cursor-theme
+gnome-calculator
+gnome-clocks
+rofi-wayland #xwayland version can give issue
+gammastep
+smile #emoji picker
+pamixer
