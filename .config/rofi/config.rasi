@@ -72,10 +72,12 @@ element {
 
 element normal.normal {
 	background-color: transparent;
+  text-color: @foreground;
 }
 
 element alternate.normal {
 	background-color: transparent;
+  text-color: @foreground;
 }
 
 element selected.active {

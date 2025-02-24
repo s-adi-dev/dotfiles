@@ -9,7 +9,7 @@
 
 if [ -f ~/.cache/waybar-disabled ]; then
   rm ~/.cache/waybar-disabled
-  ~/.config/bar/scripts/launch.sh &
+  ~/.config/custom/scripts/launch-bar.sh &
 else
   touch ~/.cache/waybar-disabled
   killall waybar
