@@ -7,10 +7,12 @@
 #           |_|
 #
 
-# Get clipboard history using cliphist and show it in rofi
-selected=$(cliphist list | cut -f2- | rofi -dmenu -p " ")
+# Get clipboard history using cliphist and show it in rofi with an extra option to clear the clipboard
+selected=$( (echo "Clear Clipboard"; cliphist list | cut -f2-) | rofi -dmenu -p " " )
 
-# If a selection is made, copy it back to clipboard
-if [[ -n "$selected" ]]; then
+# Check user selection
+if [[ "$selected" == "Clear Clipboard" ]]; then
+    cliphist wipe
+elif [[ -n "$selected" ]]; then
     echo -n "$selected" | wl-copy
 fi

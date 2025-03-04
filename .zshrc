@@ -108,6 +108,7 @@ alias lf='eza -f -F --icons --color=always --group-directories-first'
 alias la='eza -a -F --icons --color=always --group-directories-first'
 alias ll='eza -alF --icons --color=always --group-directories-first'
 alias l.='eza -a | egrep "^\."'
+alias ln="ln -s"
 
 # Functions
 lt() {
