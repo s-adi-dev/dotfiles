@@ -95,11 +95,12 @@ alias fzf='fzf --preview="${bat} --theme=\"${theme}\" --color=always {}"'
 alias fnvim='nvim $(fzf -m --preview="${bat} --theme=\"${theme}\" --color=always {}")'
 
 #--installer alias
-alias s='pikaur -Ss'
-alias i='pikaur -S'
-alias si='pikaur -Sy && yay -S'
-alias r='pikaur -Rns'
-alias q='pikaur -Q'
+AurHelper="yay"
+alias s="${AurHelper} -Ss"
+alias i="${AurHelper} -S"
+alias si="${AurHelper} -Sy && ${AurHelper} -S"
+alias r="${AurHelper} -Rns"
+alias q="${AurHelper} -Q"
 
 #--file alias
 alias l='eza -F --icons --color=always --group-directories-first'
