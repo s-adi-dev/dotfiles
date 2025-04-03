@@ -1,0 +1,60 @@
+// https://gitlab.gnome.org/GNOME/gtk/-/blob/gtk-3-24/gtk/theme/Adwaita/_colors-public.scss
+@use "/home/aditya/.cache/wal/colors-bar.scss" as *;
+@use "sass:color";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+window.Bar {
+  background: transparent;
+  font-weight: bold;
+
+  .Time {
+    color: $color6;
+    padding: 0 10px 0 0;
+  }
+
+  .Battery,
+  .Network {
+    color: $color6;
+    padding: 0 1.5px;
+  }
+
+  .Workspaces {
+    padding: 0 6px;
+    button {
+      all: unset;
+      background-color: transparent;
+      margin: 6px;
+      font-weight: 900;
+    }
+
+    .workspace-placeholder {
+      // Convert hex color to rgba with low alpha
+      color: color.adjust($color6, $alpha: -0.9);
+    }
+
+    .workspace-active {
+      color: $color6;
+    }
+
+    .workspace-focused {
+      color: $color6;
+    }
+  }
+
+  > centerbox {
+    background: $color0;
+    border-radius: 10px;
+    margin: 10px;
+    margin-bottom: 0;
+  }
+
+  button {
+    background: transparent;
+    border-radius: 8px;
+    margin: 2px;
+  }
+}
