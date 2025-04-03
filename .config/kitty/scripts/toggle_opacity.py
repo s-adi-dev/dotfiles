@@ -1,29 +1,16 @@
-import os
-import re
+from enum import Enum
 
-LUA_CONFIG_PATH = os.path.expanduser("~/.config/nvim/lua/ui/base.lua")
+
+class Theme(Enum):
+    CATPPUCCIN = "catppuccin"
+    TOKYO_NIGHT = "tokyo-night"
+
+
+theme = Theme.CATPPUCCIN.value  # or Theme.CATPPUCCIN.value
 
 
 def main():
     pass
-
-
-def update_lua_theme(pywal: bool):
-    """Update the theme in the Lua config file."""
-    new_theme = "chadwal" if pywal else "catppuccin"
-
-    # Read the Lua config
-    with open(LUA_CONFIG_PATH, "r") as file:
-        content = file.read()
-
-    # Replace the theme line
-    updated_content = re.sub(
-        r'theme\s*=\s*".*?"', f'theme = "{new_theme}"', content
-    )
-
-    # Write back the updated config
-    with open(LUA_CONFIG_PATH, "w") as file:
-        file.write(updated_content)
 
 
 def handle_result(args, answer, target_window_id, boss) -> None:
@@ -35,11 +22,9 @@ def handle_result(args, answer, target_window_id, boss) -> None:
     if current_opacity == 1:
         boss.set_background_opacity("default")
         boss.set_colors("~/.cache/wal/colors-kitty.conf")
-        update_lua_theme(pywal=True)  # Switch to "chadwal"
     else:
         boss.set_background_opacity("1")
-        boss.set_colors("~/.config/kitty/themes/catppuccin.conf")
-        update_lua_theme(pywal=False)  # Switch to "catppuccin"
+        boss.set_colors(f"~/.config/kitty/themes/{theme}.conf")
 
 
 handle_result.no_ui = True
